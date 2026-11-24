@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore Ahmedabad University undergraduate skill courses, credits and delivery platforms.">
+<title>Skill Courses Catalogue | Ahmedabad University</title>
+<style>
+:root{--navy:#102b46;--maroon:#941b36;--ink:#1d2938;--muted:#64748b;--line:#e4e9ef;--paper:#f5f7fa;--white:#fff;--blue:#245b91}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.5}
+.hero{position:relative;isolation:isolate;min-height:360px;color:#fff;background-image:linear-gradient(90deg,rgba(5,22,37,.88) 0%,rgba(5,22,37,.67) 43%,rgba(5,22,37,.12) 100%),url("campus.jpg");background-position:center 52%;background-size:cover;display:flex;align-items:center;border-bottom:5px solid var(--maroon)}
+.hero-inner{width:min(1160px,100%);margin:0 auto;padding:48px 28px 38px}.university{font-size:13px;font-weight:800;letter-spacing:2.3px;text-transform:uppercase;color:#f7e9ed;margin-bottom:22px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:1.7px;text-transform:uppercase;color:#f4c8d2;margin-bottom:10px}
+h1{font-size:clamp(32px,5vw,54px);line-height:1.08;max-width:760px;margin:0 0 14px;font-weight:800;letter-spacing:-1.2px}.hero p{font-size:clamp(15px,2vw,19px);max-width:620px;margin:0;color:#edf2f7}
+.stats{display:flex;flex-wrap:wrap;gap:0;margin-top:32px}.stat{padding:0 25px;border-left:1px solid rgba(255,255,255,.38)}.stat:first-child{padding-left:0;border-left:0}.stat strong{display:block;font-size:27px;line-height:1.1}.stat span{font-size:12px;color:#e3eaf1}
+main{max-width:1160px;margin:30px auto 56px;padding:0 22px}.toolbar{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 10px 28px rgba(16,43,70,.07);display:grid;grid-template-columns:minmax(220px,2fr) minmax(170px,1fr) minmax(145px,.8fr);gap:13px;position:relative;margin-top:-2px}
+label{display:block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;color:#596779;margin:0 0 7px}input,select{width:100%;padding:12px 13px;border:1px solid #d8e0e8;border-radius:9px;background:#fff;color:var(--ink);font:inherit;font-size:14px;outline:none}input:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(36,91,145,.12)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:14px;margin:34px 2px 16px}.section-head h2{font-size:25px;letter-spacing:-.5px;margin:0;color:var(--navy)}.section-head p{margin:0;color:var(--muted);font-size:13px}
+.resultline{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:0 2px 13px;color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.course-card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:17px;min-height:125px;display:flex;gap:13px;align-items:flex-start;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}.course-card:hover{transform:translateY(-2px);box-shadow:0 9px 22px rgba(16,43,70,.08);border-color:#cbd6e2}.course-mark{width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:#f8e9ed;color:var(--maroon);display:grid;place-items:center;font-size:17px;font-weight:800}.card-content{min-width:0;flex:1}.card-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px}.code{font-size:11px;font-weight:800;color:var(--maroon);letter-spacing:.5px}.credits{font-size:10px;font-weight:700;color:#43556a;background:#edf1f5;border-radius:999px;padding:4px 7px;white-space:nowrap}.course-name{font-size:14px;line-height:1.35;font-weight:700;color:#253348;margin:0 0 8px}.platform{font-size:11px;color:var(--muted)}.platform b{font-weight:700;color:#53667a}.empty{display:none;text-align:center;background:#fff;border:1px dashed #cbd5e1;border-radius:12px;padding:34px;color:var(--muted)}
+.info-strip{margin-top:26px;background:linear-gradient(110deg,#eaf1f8,#f8edf0);border:1px solid #e2e8f0;border-radius:14px;padding:18px 20px;color:#42536a;font-size:13px}.info-strip strong{color:var(--navy)}footer{background:#102b46;color:#dbe4ed;padding:24px 20px;text-align:center;font-size:12px}footer strong{color:#fff;letter-spacing:.6px}
+@media(max-width:820px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.toolbar{grid-template-columns:1fr 1fr}.toolbar>div:first-child{grid-column:1/-1}.hero{min-height:340px}}
+@media(max-width:560px){.hero{min-height:390px;background-position:58% center}.hero-inner{padding:34px 20px}.university{margin-bottom:18px}h1{font-size:34px}.stats{margin-top:25px;gap:15px}.stat{padding:0 12px}.stat:first-child{padding-left:0}.stat strong{font-size:23px}.stat span{font-size:10px}.toolbar{grid-template-columns:1fr;padding:14px}.toolbar>div:first-child{grid-column:auto}.grid{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.section-head h2{font-size:22px}main{padding:0 14px;margin-top:20px}}
+@media print{.hero{print-color-adjust:exact}.toolbar{display:none}.course-card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="hero" role="banner">
+  <div class="hero-inner">
+    <div class="university">Ahmedabad University</div>
+    <div class="eyebrow">Undergraduate learning</div>
+    <h1>Skill Courses Catalogue</h1>
+    <p>Explore skill courses designed to build practical knowledge and skills beyond the classroom.</p>
+    <div class="stats" aria-label="Catalogue summary">
+      <div class="stat"><strong>35</strong><span>Courses listed</span></div>
+      <div class="stat"><strong>32</strong><span>LinkedIn Learning courses</span></div>
+      <div class="stat"><strong>3</strong><span>Other course offerings*</span></div>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="toolbar" aria-label="Search and filter courses">
+    <div><label for="search">Search courses</label><input id="search" type="search" placeholder="Search by course name or code…" autocomplete="off"></div>
+    <div><label for="platform">Learning platform</label><select id="platform"><option value="">All platforms</option><option value="LinkedIn Learning">LinkedIn Learning</option><option value="On Campus">On-campus</option><option value="Off Campus">Off-campus</option></select></div>
+    <div><label for="credits">Course credits</label><select id="credits"><option value="">All credits</option><option value="1">1 credit</option><option value="1.5">1.5 credits</option><option value="2">2 credits</option><option value="3">3 credits</option></select></div>
+  </section>
+  <div class="section-head"><h2>Explore Skill Courses</h2><p>Find a course that matches your interests</p></div>
+  <div class="resultline"><span id="resultCount" aria-live="polite">Showing 35 of 35 courses</span><span>Use search and filters to narrow the list</span></div>
+  <section class="grid" id="courseGrid" aria-label="Skill courses"></section>
+  <div class="empty" id="emptyState">No courses match your search. Try changing the filters.</div>
+  <div class="info-strip"><strong>Important note:</strong> On-campus and off-campus courses are offered only when available. Course offerings may change; please check the latest university communication before registering.</div>
+</main>
+<footer><strong>AHMEDABAD UNIVERSITY</strong><br>Skill Courses Catalogue</footer>
+<script>
+const courses = [{"code": "SKL104", "name": "AI Foundation for Everyone", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL105", "name": "AI Foundation for Finance", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL106", "name": "AI Foundation for Marketing", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL107", "name": "AI: Ethics", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL108", "name": "Building Emotional Intelligence at Work", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL137", "name": "Curating Udaipur: A Course in Museum Studies", "credits": 2, "platform": "Off Campus (only when offered)"}, {"code": "SKL109", "name": "Data Science/Business Analytics", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL110", "name": "Data Visualization", "credits": 2, "platform": "LinkedIn Learning"}, {"code": "SKL111", "name": "Design Thinking", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL112", "name": "Digital Marketing", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL113", "name": "Equity Analysis", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL115", "name": "Essential of Social Media Marketing", "credits": 2, "platform": "LinkedIn Learning"}, {"code": "SKL114", "name": "Essential Skills for Business Writing", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL116", "name": "Excel: Advanced", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL117", "name": "Excel: Foundation", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL118", "name": "Financial Analysis", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL120", "name": "Foundation of ESG (Environmental, Social and Governance)", "credits": 1.5, "platform": "LinkedIn Learning"}, {"code": "SKL119", "name": "Foundations of Ecommerce", "credits": 2, "platform": "LinkedIn Learning"}, {"code": "SKL121", "name": "Foundations of User Experience (UX) Design", "credits": 3, "platform": "LinkedIn Learning"}, {"code": "SKL122", "name": "Fundamentals of Microsoft Azure", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL123", "name": "Getting Started with Google Cloud", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL124", "name": "Getting Started with Power BI", "credits": 2, "platform": "LinkedIn Learning"}, {"code": "SKL125", "name": "Getting Started with SAP Business One", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL136", "name": "Library Skill Course on Digitisation of Archives", "credits": 1, "platform": "On Campus (only when offered)"}, {"code": "SKL126", "name": "Machine Learning", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL127", "name": "Managing Human Resource", "credits": 1.5, "platform": "LinkedIn Learning"}, {"code": "SKL133", "name": "Product Management", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL128", "name": "Python: Advanced", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL129", "name": "Python: Foundation", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL130", "name": "R: Foundation", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL131", "name": "SEO Fundamentals for Better Search Visibility", "credits": 1.5, "platform": "LinkedIn Learning"}, {"code": "SKL132", "name": "Six Sigma Certification Path", "credits": 1.5, "platform": "LinkedIn Learning"}, {"code": "SKL134", "name": "Tableau: Advanced", "credits": 1.5, "platform": "LinkedIn Learning"}, {"code": "SKL135", "name": "Tableau: Foundation", "credits": 1, "platform": "LinkedIn Learning"}, {"code": "SKL138", "name": "The Rajasthani Summer School", "credits": 1.5, "platform": "Off Campus (only when offered)"}];
+const grid = document.getElementById('courseGrid');
+const search = document.getElementById('search');
+const platform = document.getElementById('platform');
+const credits = document.getElementById('credits');
+const resultCount = document.getElementById('resultCount');
+const emptyState = document.getElementById('emptyState');
+function platformKey(value){if(value.startsWith('Off Campus'))return 'Off Campus';if(value.startsWith('On Campus'))return 'On Campus';return value;}
+function escapeHtml(value){return String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
+function render(){
+ const q=search.value.trim().toLowerCase(),p=platform.value,c=credits.value;
+ const filtered=courses.filter(course=>(course.code.toLowerCase().includes(q)||course.name.toLowerCase().includes(q))&&(!p||platformKey(course.platform)===p)&&(!c||String(course.credits)===c));
+ grid.innerHTML=filtered.map(course=>`<article class="course-card"><div class="course-mark" aria-hidden="true">${course.platform==='LinkedIn Learning'?'✦':'◈'}</div><div class="card-content"><div class="card-top"><span class="code">${escapeHtml(course.code)}</span><span class="credits">${course.credits} ${course.credits===1?'Credit':'Credits'}</span></div><h3 class="course-name">${escapeHtml(course.name)}</h3><div class="platform">${escapeHtml(course.platform)}</div></div></article>`).join('');
+ resultCount.textContent=`Showing ${filtered.length} of ${courses.length} courses`;emptyState.style.display=filtered.length?'none':'block';grid.style.display=filtered.length?'grid':'none';
+}
+[search,platform,credits].forEach(el=>el.addEventListener('input',render));render();
+</script>
+</body>
+</html>
